@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix Clone</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="/static/style.css"> -->
     <link rel="icon" href="/static/images/logoverc.png" type="image/png" />
 
 
@@ -36,7 +36,6 @@
             class="nav__avatar"
           />
         </div>
-        <!-- Hamburger icon -->
         <div class="hamburger-menu" id="hamburger-menu">
           <i class="fas fa-bars"></i>
         </div>
@@ -108,7 +107,6 @@
 
       <div class="whatimage">
         <div>
-            <!-- <img src="{{ url_for('static', filename='images/file-checker-documents-folders-scan-md.svg') }}" alt=""  /> -->
 
           <img src="https://ic.nordcdn.com/v1/https://sb.nordcdn.com/m/479f345197c46f06/original/file-checker-documents-folders-scan-md.svg" class="whatimg" alt="">
         </div>
@@ -151,7 +149,6 @@
           <div class="circle-image">
             <img src="{{ url_for('static', filename='images/safe-documents-files-check-laptop-md.avif') }}" alt="" />
 
-            <!-- <img src="/images/safe-documents-files-check-laptop-md.avif" alt="NordVPN file checker" /> -->
           </div>
         </div>
       </div>
@@ -159,23 +156,8 @@
     
 
 
-    <!-- <section class="protect">
-      <div class="box">
-        <span class="bold-text">Protection beyond file scanning</span>
-      </div>
-
-        <button class="button" onclick="alert('Button clicked!')">Go back to the File</button>
-
-        <div>
-          <p>Online threats are not limited to infected files. NordVPN’s Threat Protection Pro automatically scans files for viruses as you download them as well as blocks ads, removes web trackers, and helps you avoid dangerous websites.</p>
-        </div>
-    </section> -->
-
-    
-
     <script>
       document.querySelectorAll('.dropdown-header').forEach((header, index) => {
-    // Open the first dropdown by default
     if (index === 0) {
         header.classList.add('open');
         header.nextElementSibling.classList.add('open');
@@ -185,13 +167,11 @@
         const content = header.nextElementSibling;
         const isOpen = content.classList.contains('open');
 
-        // Close all open dropdowns first
         document.querySelectorAll('.dropdown-content.open').forEach(openContent => {
             openContent.classList.remove('open');
             openContent.previousElementSibling.classList.remove('open');
         });
 
-        // Toggle the clicked dropdown
         if (!isOpen) {
             header.classList.add('open');
             content.classList.add('open');
@@ -205,7 +185,6 @@
 
     
 
-    <!-- Netflix Orginals -->
 
 
     <footer id="foot">

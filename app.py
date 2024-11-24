@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 UPLOAD_FOLDER = 'uploads'
+MAX_FILE_SIZE = 10 * 1024 * 1024  # 10 MB limit
 
 suspicious_extensions = ['.exe', '.dll', '.bat', '.scr', '.vbs']
 
@@ -23,7 +24,6 @@ known_malicious_hashes = [
     "e4e5c3a6c15beff4e17117075e2c0bd65f176d81e6885134d2b4d97c20d4773a",
     "f681c1f8c12956a20c27beb9be1112374fefc7651884d7dd92010b40db1e7bee",
     "f7b0d6d95f2644e32c22eb3e681e33387ac27d71dd73eee3ff37ce77985ab177",
-
 ]
 
 def get_file_hash(file_path):
@@ -33,18 +33,25 @@ def get_file_hash(file_path):
             sha256_hash.update(chunk)
     return sha256_hash.hexdigest()
 
+def get_file_size(file_path):
+    return os.path.getsize(file_path)
+
 def check_file(file_path):
     file_name = os.path.basename(file_path)
     file_ext = os.path.splitext(file_name)[1].lower()
+    file_size = get_file_size(file_path)
     file_hash = get_file_hash(file_path)
 
+    if file_size > MAX_FILE_SIZE:
+        return {"status": "suspicious", "message": f"File too large: {file_name}. Maximum size allowed is 10MB.", "file_size": file_size}
+
     if file_ext in suspicious_extensions:
-        return {"status": "suspicious", "message": f"Suspicious file extension detected: {file_name} Unsafe"}
+        return {"status": "suspicious", "message": f"Suspicious file extension detected: {file_name} Unsafe", "file_size": file_size}
 
     if file_hash in known_malicious_hashes:
-        return {"status": "suspicious", "message": f"Malicious file detected : {file_name} Unsafe"}
+        return {"status": "suspicious", "message": f"Malicious file detected : {file_name} Unsafe", "file_size": file_size}
 
-    return {"status": "clean", "message": "File is clean. Safe"}
+    return {"status": "clean", "message": "File is clean. Safe", "file_size": file_size}
 
 @app.route('/')
 def index():
@@ -63,6 +70,10 @@ def upload_file():
     file.save(file_path)
 
     result = check_file(file_path)
+
+    # Convert file size from bytes to a more readable format (KB, MB)
+    file_size_in_mb = result['file_size'] / (1024 * 1024)
+    result['file_size'] = f"{file_size_in_mb:.2f} MB"
 
     return jsonify(result)
 

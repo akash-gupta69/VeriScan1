@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 UPLOAD_FOLDER = 'uploads'
-MAX_FILE_SIZE = 10 * 1024 * 1024  # 10 MB limit
+MAX_FILE_SIZE = 10 * 1024 * 1024
 
 suspicious_extensions = ['.exe', '.dll', '.bat', '.scr', '.vbs']
 
@@ -71,7 +71,6 @@ def upload_file():
 
     result = check_file(file_path)
 
-    # Convert file size from bytes to a more readable format (KB, MB)
     file_size_in_mb = result['file_size'] / (1024 * 1024)
     result['file_size'] = f"{file_size_in_mb:.2f} MB"
 

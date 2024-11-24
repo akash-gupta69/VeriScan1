@@ -8,9 +8,9 @@
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #000000;
-    margin: 0; /* Remove default browser margins */
-    padding: 0; /* Remove default browser padding */
-    height: 100%; /* Ensure the body takes up full height */
+    margin: 0;
+    padding: 0;
+    height: 100%;
     
   }
   
@@ -20,7 +20,6 @@
     background-image: url(https://img.freepik.com/premium-vector/hi-tech-digital-technology-circuit-board-ai-pad-electrical-lines-blue-lighting-background_120819-1154.jpg?w=1060);
     background-size: cover;
     background-position: center center;
-    /* background-color: #0056b3; */
     color: rgb(255, 255, 255);
     object-fit: contain;
     height: 448px;
@@ -30,7 +29,6 @@
   }
   
   .crop {
-    /* background-color: #009dff; */
     width: 350px;
     height: 180px;
     margin-left: -20px;
@@ -61,10 +59,7 @@
 
   }
   .nav__logo:hover {
-    /* filter: drop-shadow(0px 0px 14px rgba(255, 255, 255, 0.8)); */
     box-shadow: 0 3px 100px rgb(255, 241, 47);
-
-    /* box-shadow: 0 0 50px #ff1010; */
   }
   h1 {
     color: #ffffff;
@@ -93,9 +88,7 @@
   }
   .nav {
     position: fixed;
-    /* background: linear-gradient(to bottom, #ff3f3f, transparent); */
-    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.292); /* Optional: Subtle shadow */
-    /* background-color: #ffffff; */
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.292);
     backdrop-filter: blur(10px);
     top: 0;
     width: 100%;
@@ -111,12 +104,9 @@
     text-decoration: none;
     color: #ffffff;
     position: relative;
-    /* background: linear-gradient( to bottom, #111, transparent); */
     background-color: transparent;
     padding: 20px 20px 10px 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* border-radius: 10px;
-      margin-top: -10px; */
   }
   .nav a::before {
     content: "";
@@ -138,7 +128,6 @@
   .nav__black {
     background: transparent;
     border-radius: 20px;
-    /* background-color: #ffffff; */
     backdrop-filter: blur(10px);
     margin: 10px 0 0 65px;
     width: 90%;
@@ -164,24 +153,20 @@
     align-items: center;
     padding-top: 50px;
     height: 600px; 
-    /* background-color: #f3f7fc; */
-    /* background: url(https://img.freepik.com/free-vector/abstract-background-with-security-connections_23-2147635527.jpg?t=st=1732403703~exp=1732407303~hmac=e6aaef0d157b26155c742903bdac57455e6bd66a9d06f5d7bccfb1a81de696a8&w=740); */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.47) 0%, rgba(0, 0, 0, 0.52) 100%), 
             url("https://res.cloudinary.com/diy6wydjk/images/c_scale,w_1024,h_512,dpr_1.2000000476837158/f_auto,q_auto/v1705139424/system-background-compromised-by-hacking-3d-illustration-1024x512-1/system-background-compromised-by-hacking-3d-illustration-1024x512-1.jpg?_i=AA") 
             #eae7de;
-background-size: cover; /* Ensures the image covers the entire area */
-background-position: center; /* Centers the image */
-background-repeat: no-repeat; /* Prevents the image from repeating */
+background-size: cover; 
+background-position: center; 
+background-repeat: no-repeat; 
 
 
   }
   
   .container {
-    text-align: center; /* Centers the content horizontally */
-    /* background: white; */
-    padding: 2rem; /* Optional padding for spacing */
-    border-radius: 10px; /* Optional: Rounded corners */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px; 
   }
   
   h1 {
@@ -210,7 +195,7 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
-    gap: 1rem; /* Add space between form elements */
+    gap: 1rem;
   }
   
   .drop-area {
@@ -262,7 +247,6 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
     background: linear-gradient(to bottom, #00000079 0%, #00000086 100%), url("https://img.freepik.com/free-vector/blue-futuristic-waves-background-with-computer-code-technology_53876-119575.jpg?t=st=1732406192~exp=1732409792~hmac=01c38cb938231087b914004ae194ce11797e2be742d16fb9d0bf0bea6744077c&w=996") #eae7de;
     object-fit: cover;
 
-    /* background-color: #000000; */
   }
   
   .toptext {
@@ -273,8 +257,6 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
     margin: 0;
     text-align: center; 
     padding-top: 50px;
-    /* background: linear-gradient(to bottom, #00000079 0%, #00000086 100%), url("https://img.freepik.com/free-vector/blue-futuristic-waves-background-with-computer-code-technology_53876-119575.jpg?t=st=1732406192~exp=1732409792~hmac=01c38cb938231087b914004ae194ce11797e2be742d16fb9d0bf0bea6744077c&w=996") #eae7de; */
-    /* object-fit: cover; */
     backdrop-filter: blur(60);
 
     background-color: #000000;
@@ -321,10 +303,6 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
   .why-choose {
     text-align: center;
     padding: 40px 20px;
-    /* background: linear-gradient(to bottom, #00000079 0%, #00000086 100%), url("https://img.freepik.com/free-vector/blue-neon-synthewave-patterned-background-vector_53876-140477.jpg?t=st=1732407824~exp=1732411424~hmac=c3096ec7899aeddfbc2ff75341c6af236f4a9d3a60ddd894e30f6aa0941c78aa&w=1060");
-    -o-object-fit: cover; */
-
-    /* background-color: #000000; */
   }
   
   .center-text h1 {
@@ -366,7 +344,6 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
     content: '+';
     font-size: 1.2em;
     position: absolute;
-    /* right: 0; */
     transition: transform 0.3s ease;
   }
   
@@ -383,19 +360,14 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
   }
   
   .dropdown-content.open {
-    max-height: 200px; /* Adjust based on content length */
+    max-height: 200px; 
     opacity: 1;
   }
   
   .right-image .circle-image {
     width: 550px;
     height: 550px;
-    /* border-radius: 50%; */
-    /* overflow: hidden; */
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* background-color: #f4f4f4; */
   }
   
   .right-image img {
@@ -403,7 +375,6 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
     height: 100%;
     margin-top: -150px;
     margin-left: -50px;
-    /* object-fit: cover; */
   }
   
   
@@ -441,12 +412,12 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
     color: white;
     background-color: #333;
     border: none;
-    border-radius: 60px; /* Curly edges */
+    border-radius: 60px;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   .button:hover {
-    background-color: #ff17021f; /* Darker background on hover */
+    background-color: #ff17021f; 
   }
   .box p {
     line-height: 1.6;
@@ -490,7 +461,6 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
   
   
   
-  /* MAIN CONTIANER */
   img {
     max-width: 100%;
   }
@@ -543,7 +513,6 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
     transform: scale(1.4);
   }
   
-  /* LINKS */
   
   
   
@@ -552,7 +521,6 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
     padding-bottom: 60px;
   }
   .sub-links {
-    /* margin: 0 0 0 200px; */
     margin: 40px 0 0 100px;
   }
   .sub-links ul {
@@ -581,33 +549,29 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
     color: #ffffff;
   }
   
-  /* FOOTER */
   footer {
     text-align: left;
     color: #ffffff;
     height: 100%;
-    /* margin: 30px; */
   }
   
   
   
-  /* Hide hamburger menu by default */
 .hamburger-menu {
     display: none;
     cursor: pointer;
     font-size: 30px;
   }
   
-  /* Show the hamburger menu when the screen is 600px or less */
   @media (max-width: 600px) {
     .nav-links {
-      display: none; /* Hide links by default */
+      display: none; 
       width: 100%;
       text-align: center;
       position: absolute;
       top: 60px;
       left: 0;
-      background-color: #111; /* Dark background for the menu */
+      background-color: #111;
       padding-top: 20px;
     }
     .nav-links a {
@@ -618,10 +582,10 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
       font-size: 18px;
     }
     .hamburger-menu {
-      display: block; /* Show hamburger icon */
+      display: block; 
     }
     .nav-links.active {
-      display: block; /* Show the menu when active */
+      display: block;
     }
 
     
@@ -672,7 +636,6 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
       text-align: center;
     }
     .banner__description {
-      /* width: 250px; */
       display: none;
     }
     .crop {
@@ -703,7 +666,6 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
     }
   
     img {
-      /* max-width: 200px; */
     }
     .main-container {
       padding: 0 50px 0 20px;
@@ -718,7 +680,6 @@ background-repeat: no-repeat; /* Prevents the image from repeating */
     }
   
     .sub-links {
-      /* margin: 0 0 0 200px; */
       margin: 0 0 0 2px;
     }
     .logos {
